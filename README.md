@@ -15,7 +15,7 @@ We live in a multi-token world, with thousands of digital assets residing across
 
 The current solutions to the challenge of interoperability, such as atomic swaps and decentralized ERC-20 networks  are laudable, yet greatly limited in terms of speed, scalability and functionality. To date, a decentralized network enabling the fast, inexpensive and functional exchange of any digital asset across any blockchain has not been successfully implemented. Instead, powerful centralized exchanges have been erected, wielding outsized influence over the ecosystem, introducing third-party risk, and undermining Nakomoto’s original vision. At the same time, many existing offerings of decentralized exchanges are not satisfactory due to a combination of limited token offerings, poor user experience, and slow transaction times. 
 
-<Figure 1>
+![Figure 1](img/figure1.png)
 
 Enter Ferrum Network, enabling the fast and inexpensive peer-to-peer exchange of any digital asset, regardless of originating blockchain. Ferrum is a decentralized platform where users can manage, transact and exchange their digital assets without passing the custody of their assets to a third-party. Built on a directed-acyclic graph (DAG) network , Ferrum has inherent advantages over traditional blockchains in terms of speed, cost and scalability . By utilizing Ferrum’s groundbreaking technology to securely import and export value across chains, users can deposit any asset into Ferrum Network creating a proxy token that can be transacted and exchanged using the Ferrum Wallet or the Ferrum DEX. 
 
@@ -128,7 +128,7 @@ Bitcoin was the first widely known decentralized cryptocurrency. In his seminal 
 
 
 
-<Figure 1>
+![Figure 2](img/figure2.png)
 
 
 
@@ -151,9 +151,7 @@ In above example, it is very important for the bank to secure its safe. If a thi
 Ferrum can also represent proxy tokens other than Fe(BTC). The technology that provides security guarantees for importing value is non-trivial. We have developed several techniques that provide various types of guarantee and are suitable for external networks with different characteristics. These techniques are discussed in more details in section 3 of this paper.
 
 
-
-<Figure 2>
-
+![Figure 3](img/figure3.png)
 
 
 The following procedure is the general algorithm for transferring value from network X to Ferrum:
@@ -197,10 +195,7 @@ Most crypto asset exchanges today are traditional centralized exchanges. A centr
 Ferrum Network can function as the highway fueling decentralized exchanges by functioning as their settlement layer. We have built exchange transactions without counterparty risk as the first-class citizen of the Ferrum Network. Although Ferrum Network only recently began development, users of the test net can already exchange Bitcoin and Ethereum peer-to-peer using Ferrum's mobile wallets over Ferrum's decentralized network and can do so on a fast and inexpensive basis. As more networks securely plug-in to the Ferrum Network, users will be able to directly exchange any variety of tokens, from ERC-20 tokens, to tokens generated on the NEO network, the EOS network, the Wanchain network, etc., and with established tokens that exist on their own blockchains, such as XRP and LTC. In other words, Ferrum is blockchain agnostic, and can be used to exchange any digital asset as long as its host network is securely plugged-in to Ferrum Network. Because Ferrum Network is built using a DAG system, these transactions can be executed in a fast, scalable and cost-effective manner when compared to the existing solutions. To facilitate the simple exchange of thousands of tokens in a scalable and inexpensive manner, Ferrum Network is dedicated to building a first-rate user experience, such that any user can easily and intuitively exchange tokens peer-to-peer over Ferrum's decentralized network. 
 
 
-
-
-
-<Figure 3>
+![Figure 4](img/figure4.png)
 
 
 
@@ -237,11 +232,7 @@ Ferrum is designed from the ground up to support tokens that represent external 
 Ferrum Network envisions a day in which merchants and consumers can transact in cryptocurrencies for every day purchases over the Ferrum Network. To this end, Ferrum Network is a building a decentralized payment solution. Using the Ferrum Network, merchants and services will be able to accept and seamlessly transact with any cryptocurrency in a fast and scalable manner. For instance, by creating a proxy BTC on the Ferrum Network, consumers will be able to quickly and cheaply purchase a cup of coffee, which would not otherwise be possible using the Bitcoin network due to its relatively slow transaction times and high fees. 
 
 
-
-
-
-<Figure 4>
-
+![Figure 5](img/figure5.png)
 
 
 By utilizing the Ferrum Network as their transaction layer, financial institutions, merchants and payment solutions can develop applications that provide or accept payments in a wide range of digital or real-world assets. Figure 4 shows how Ferrum Network connects consumers and merchants to the Internet of Value. 
@@ -283,7 +274,7 @@ Imagine a chaotic medieval army marching through a complicated terrain. A number
 
 Ferrum Network enables users to write their code using their favorite language, whether that be Python, Go, Java, etc., and package it with all the dependencies. They can use their existing tooling and programming knowledge to write a decentralized application (or dApp). This immediately increases the number of people who can contribute to the decentralized ecosystem.
 
-<Figure 5>
+![Figure 6](img/figure6.png)
 
 Currently, a user can write an application, package it with dependencies and run it on one of the common cloud providers, such as Amazon (AWS), Microsoft (Azure), or Google Compute Cloud. They pay for the resources they use to the cloud providers. Ferrum Network turns this model upside down by allowing users to present their compute resources to the Ferrum network. In other words, users can run decentralized applications and get paid for their resources in Ferrum Tokens. 
 
@@ -294,7 +285,7 @@ We propose a flexible protocol that allows users to choose a trade-off between s
 
 Ferrum Network is designed with flexibility, scalability and specialization in mind. Ferrum Side Networks can seamlessly interact with the main Ferrum Network, while keeping their load off of the main network, thereby improving scalability and facilitating innovation and specialization. 
 
-<Figure 6>
+![Figure 7](img/figure7.png)
 
 In addition of scalability, Ferrum Colonies allows for specialization of sub-networks. For example, a small nation state decides to adopt a digital currency, which they control completely, yet must interact with the external world. They can adopt a Ferrum spin-off for their economy and issue their currency without concern of being dependent on a network that they do not control. Another example is a spin-off that is adopted by a scientific community to study Genome models. Such a network has specialized needs, such as memory and processor heavy smart contracts, or high bandwidth, and they may wish to limit submitting transactions on the network only to the members of the community. Such a sub-network can create a Ferrum spin-off for their specialized needs, yet be able to interact to the external world, sell their results, receive money, and so forth, all through their connection to the main Ferrum Network.
 
@@ -306,7 +297,7 @@ Although Ferrum Network makes interaction between networks possible, the Ferrum 
 
 To help solve the issues with scalability and interoperability, users can transfer any digital asset to the Ferrum Network, where a proxy of that token is generated. The proxy token can then be transacted and exchanged over the Ferrum Network in a cost-effective and scalable manner. However, users can rest assured that the proxy represents and is backed by external value. 
 
-<Figure 7>
+![Figure 8](img/figure8.png)
 
 The subjects of transactions on the Ferrum network is "Fe", which, for the lack of better world we refer as a cryptocurrency. Fe, however, is not a cryptocurrency in and of itself. Instead, the value of Fe is a function of the values of external cryptocurrencies it represents. To clarify, imagine the following scenario: Alice generates 1 Fes by transferring one Bitcoin to the Ferrum network. She then generates another Fe by transferring one Ether to the Ferrum network. Alice now has 2 Fes but her total wealth is 1 Bitcoin and 1 Ether. We represent Alice's wealth as 1 Fe(BTC)+ 1 Fe (ETH). The general form of Alice's wealth is  ∑iaiFe(i) where i is the external cryptocurrency and  Wi is the amount for i. In-fact, a Fe wallet is nothing but a surrogate for a portfolio of external cryptocurrencies.
 
@@ -480,7 +471,7 @@ The major drawback of decentralized ledgers currently in production is the probl
 
 A decentralized ledger runs on a distributed network of individual nodes. Such networks are well studied in the context of Internet, distributed database systems, and even social networks. If nodes in a distributed network find their neighbors randomly with a bias toward geographical proximity, we will have an architecture similar to the Internet’s architecture, but obviously much smaller. Such networks when represented as graphs are usually consisted of pockets of dense sub graphs connected to create a larger graph. Average distance between nodes, hence the amount of time it takes for a message to reach other nodes grows very slowly even when the network grows very fast. The figure below shows that the average distance between nodes in such graphs drops sharply after a number between 5 or 10 regardless of the size of the graph [15].
 
-<Figure 8>
+![Figure 9](img/figure9.png)
 
 
 Since the distance between nodes does not grow too fast, the load on nodes will grow as fast as the network, hence, the size of the network is effectively bound by the processing power of the average node. This is a significant limiting factor. The typical next step to break down the load on the network is sharding, but sharding is not easy for the blockchain because of the consensus mechanism.
