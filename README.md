@@ -751,20 +751,20 @@ In sum, Ferrum Network is the worlds’ first fully interoperable decentralized 
 # References
 
 https://bitcoin.org/bitcoin.pdf
-1  https://media.consensys.net/state-of-decentralized-exchanges-2018-276dad340c79
-2  https://ericsink.com/vcbe/html/directed_acyclic_graphs.html
-3  https://ieeexplore.ieee.org/document/8416434
-4  https://lightning.network/lightning-network-paper.pdf
-5  https://www.wired.com/2014/03/bitcoin-exchange/
-6  https://www.reuters.com/article/us-japan-cryptocurrency-q-a/the-coincheck-hack-and-the-issue-with-crypto-assets-on-centralized-exchanges-idUSKBN1FI0K4
-7  https://coinmarketcap.com/rankings/exchanges/
-8  https://www.businessinsider.com/cryptocurrency-exchanges-listing-tokens-cost-fees-ico-2018-3
-9  https://0xproject.com/pdfs/0x_white_paper.pdf
-10  https://swap.tech/whitepaper/
-11  https://idex.market/whitepaper
-12  https://arxiv.org/pdf/1801.09515.pdf
-13  https://courses.csail.mit.edu/6.857/2018/project/Hao-Chang-Lu-Zhang-CCExch.pdf
-14  https://www.ccn.com/otc-is-much-larger-than-bitcoin-exchange-volume-where-real-whales-trade/
-15  https://lightning.network/
-16  http://people.stern.nyu.edu/mbrenner/research/short_selling.pdf
+1.  https://media.consensys.net/state-of-decentralized-exchanges-2018-276dad340c79
+2.  https://ericsink.com/vcbe/html/directed_acyclic_graphs.html
+3. https://ieeexplore.ieee.org/document/8416434
+4. https://lightning.network/lightning-network-paper.pdf
+5. https://www.wired.com/2014/03/bitcoin-exchange/
+6. https://www.reuters.com/article/us-japan-cryptocurrency-q-a/the-coincheck-hack-and-the-issue-with-crypto-assets-on-centralized-exchanges-idUSKBN1FI0K4
+7. https://coinmarketcap.com/rankings/exchanges/
+8. https://www.businessinsider.com/cryptocurrency-exchanges-listing-tokens-cost-fees-ico-2018-3
+9. https://0xproject.com/pdfs/0x_white_paper.pdf
+10. https://swap.tech/whitepaper/
+11. https://idex.market/whitepaper
+12. https://arxiv.org/pdf/1801.09515.pdf
+13. https://courses.csail.mit.edu/6.857/2018/project/Hao-Chang-Lu-Zhang-CCExch.pdf
+14. https://www.ccn.com/otc-is-much-larger-than-bitcoin-exchange-volume-where-real-whales-trade/
+15. https://lightning.network/
+16. http://people.stern.nyu.edu/mbrenner/research/short_selling.pdf
 
