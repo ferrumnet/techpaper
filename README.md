@@ -372,7 +372,7 @@ For many people blockchain is synonymous to distributed ledger technology. Howev
 
 Blockchain consists of blocks which are ordered units each containing a set of transactions and connected together using a Merkle Tree data structure. Each block represents an unforgeable hash of the previous block which makes the ordering of blocks immutable. Whereas in a DAG network, each transaction is a node in a graph that points to other graphs. The graph edges have different roles in the existing DAG technologies. For example, in Nano each account is granted its account chain and graph nodes are appended to an account chain [6]. In IOTA, each node represents a transaction and edges represents two other random transactions that are approved with this node [7].
 
-In blockchains, proof of work or proof of state are used as part of the consensus mechanism. In many DAG based networks, proof of work is still used but its utility is not in relation to the consensus mechanism. Instead it is used as a mean to prevent spamming the network.
+In blockchains, proof of work or proof of stake are used as part of the consensus mechanism. In many DAG based networks, proof of work is still used but its utility is not in relation to the consensus mechanism. Instead it is used as a mean to prevent spamming the network.
 
 Ferrum uses a DAG to represents transactions. Although in theory DAGs do not cap the throughput in contrast to the blocks in a blockchain, the realities of the physical world put limitation on the throughput and latency of the network. Bandwidth, node memory and processor power are all limited regardless of the technology and data structure used for the distributed ledger. Ferrum innovates on the DAG paradigm by improving scalability, in terms of both latency and throughput. We discuss such improvements in the rest of this section.
 
@@ -767,4 +767,3 @@ https://bitcoin.org/bitcoin.pdf
 14. https://www.ccn.com/otc-is-much-larger-than-bitcoin-exchange-volume-where-real-whales-trade/
 15. https://lightning.network/
 16. http://people.stern.nyu.edu/mbrenner/research/short_selling.pdf
-
