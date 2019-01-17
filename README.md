@@ -125,7 +125,7 @@ As explained in the following paragraphs, Ferrum Network is a DAG-based infrastr
 
 
 
-Bitcoin was the first widely known decentralized cryptocurrency. In his seminal whitepaper, Satoshi Nakamoto set forth his vision for the cryptocurrency Bitcoin, and presented a secure mechanism which became known as blockchain for storing transactions. Blockchain is a Merkle Hash Tree [1] that is pruned into a Merkle Hash linked list by competing miners. Figure 1 (a) shows a blockchain where blocks are linked together. Blockchain, a revolutionary technological breakthrough, nevertheless suffers from the problem of scalability. We believe that another method of implementing decentralized ledgers by decentralized network, known as a DAG based network, is a more effective solution. DAG is short for Directed Acyclic Graphs, which describes the data structure that represents transactions in these networks. Figure 1(b) illustrates transactions in a DAG based network.
+Bitcoin was the first widely known decentralized cryptocurrency. In his seminal whitepaper, Satoshi Nakamoto set forth his vision for the cryptocurrency Bitcoin, and presented a secure mechanism which became known as blockchain for storing transactions. Blockchain is a Merkle Hash Tree [1] that is pruned into a Merkle Hash linked list by competing miners. Figure 2 (a) shows a blockchain where blocks are linked together. Blockchain, a revolutionary technological breakthrough, nevertheless suffers from the problem of scalability. We believe that another method of implementing decentralized ledgers by decentralized network, known as a DAG based network, is a more effective solution. DAG is short for Directed Acyclic Graphs, which describes the data structure that represents transactions in these networks. Figure 2 (b) illustrates transactions in a DAG based network.
 
 
 
@@ -363,14 +363,14 @@ Adversaries are users that provide services to other users, such as running dApp
 
 ### Adversary Collusion
 
-The "51% attack" in blockchain parlance describes a scenario in which an actor takes control of more than half of the network, such that they can control the blockchain [5]. However, the proof of work mechanism makes it very difficult to mount a successful 51% attack. To make sure an action is secure, we need to run it on all nodes in the network. This has very good security but significantly limits scalability. In Ferrum, we have developed fair random selection methods that ensure a random selection of actors. The fair random selection methods described later in this section ensures that if someone does not already control more than 51% of the nodes, she cannot have more than 51% representation in the random sample. However, the risk here is that the smaller number of nodes in the random sample can collude to steal value. Later on, we propose methods that significantly reduce the possibility of collusion.
+The "51% attack" in blockchain parlance describes a scenario in which an actor takes control of more than half of the network, such that they can control the blockchain [1]. However, the proof of work mechanism makes it very difficult to mount a successful 51% attack. To make sure an action is secure, we need to run it on all nodes in the network. This has very good security but significantly limits scalability. In Ferrum, we have developed fair random selection methods that ensure a random selection of actors. The fair random selection methods described later in this section ensures that if someone does not already control more than 51% of the nodes, she cannot have more than 51% representation in the random sample. However, the risk here is that the smaller number of nodes in the random sample can collude to steal value. Later on, we propose methods that significantly reduce the possibility of collusion.
 
 
 ### DAG Based Network
 
-For many people blockchain is synonymous to distributed ledger technology. However, blockchain is only one of the specializations in the field. Besides blockchain, directed acyclic graphs or DAG is gaining momentum. The most notable difference between the two is that blockchains bundle transactions in cryptographically linked blocks forming a single chain containing the global truth, while DAGs use a graph where a transaction is represented as a node in the graph [6].
+For many people blockchain is synonymous to distributed ledger technology. However, blockchain is only one of the specializations in the field. Besides blockchain, directed acyclic graphs or DAG is gaining momentum. The most notable difference between the two is that blockchains bundle transactions in cryptographically linked blocks forming a single chain containing the global truth, while DAGs use a graph where a transaction is represented as a node in the graph [2].
 
-Blockchain consists of blocks which are ordered units each containing a set of transactions and connected together using a Merkle Tree data structure. Each block represents an unforgeable hash of the previous block which makes the ordering of blocks immutable. Whereas in a DAG network, each transaction is a node in a graph that points to other graphs. The graph edges have different roles in the existing DAG technologies. For example, in Nano each account is granted its account chain and graph nodes are appended to an account chain [6]. In IOTA, each node represents a transaction and edges represents two other random transactions that are approved with this node [7].
+Blockchain consists of blocks which are ordered units each containing a set of transactions and connected together using a Merkle Tree data structure. Each block represents an unforgeable hash of the previous block which makes the ordering of blocks immutable. Whereas in a DAG network, each transaction is a node in a graph that points to other graphs. The graph edges have different roles in the existing DAG technologies. For example, in Nano each account is granted its account chain and graph nodes are appended to an account chain [3]. In IOTA, each node represents a transaction and edges represents two other random transactions that are approved with this node [4].
 
 In blockchains, proof of work or proof of state are used as part of the consensus mechanism. In many DAG based networks, proof of work is still used but its utility is not in relation to the consensus mechanism. Instead it is used as a mean to prevent spamming the network.
 
@@ -404,11 +404,11 @@ Most networks such as the Bitcoin network support multi signature contracts. Thi
 
 #### Decentralized Secret Sharing
 
-In Ferrum, we have developed a decentralized secret sharing scheme that is used to lock and unlock external accounts. Shamir threshold secret sharing method [8] is a well-known method for distributing a secret to n different actors. At any time, t actors can reconstruct the secret by revealing their part. However, if any less than t actors collude, they will not be able to get any information about the secret. The Shamir algorithm is simply based on the fact that coefficients of a polynomial of degree k-1 can be found by extrapolating k known points on the polynomial, and the fact that given k points on a plate, there is only one polynomial that crosses all the points. Shamir makes this method secure by applying above to the discrete modulo p domain.
+In Ferrum, we have developed a decentralized secret sharing scheme that is used to lock and unlock external accounts. Shamir threshold secret sharing method [5] is a well-known method for distributing a secret to n different actors. At any time, t actors can reconstruct the secret by revealing their part. However, if any less than t actors collude, they will not be able to get any information about the secret. The Shamir algorithm is simply based on the fact that coefficients of a polynomial of degree k-1 can be found by extrapolating k known points on the polynomial, and the fact that given k points on a plate, there is only one polynomial that crosses all the points. Shamir makes this method secure by applying above to the discrete modulo p domain.
 
-The problem with the Shamir secret sharing method for locking external value is that it requires the secret to be constructed by a trusted dealer. There have been several works on applying Shamir secret sharing algorithm to public key cryptography [9], [10]. Some works such as [11] have applied Shamir’s algorithm DSA or ECDSA [12]. In [13] a method is proposed to sign Bitcoin addresses with a distributed secret without the need for reconstructing the secret.
+The problem with the Shamir secret sharing method for locking external value is that it requires the secret to be constructed by a trusted dealer. There have been several works on applying Shamir secret sharing algorithm to public key cryptography [6], [7]. Some works such as [8] have applied Shamir’s algorithm DSA or ECDSA [9]. In [10] a method is proposed to sign Bitcoin addresses with a distributed secret without the need for reconstructing the secret.
 
-Unfortunately, distributed threshold signing of elliptic curve signatures such as [13] has sub-exponential space and time complexity in order of participants. Therefore, such methods are impractical for a large number of signers. Ferrum Network uses a threshold secret sharing method that does not need a trusted dealer and can generate the ECDSA public key without ever constructing the secret.
+Unfortunately, distributed threshold signing of elliptic curve signatures such as [11] has sub-exponential space and time complexity in order of participants. Therefore, such methods are impractical for a large number of signers. Ferrum Network uses a threshold secret sharing method that does not need a trusted dealer and can generate the ECDSA public key without ever constructing the secret.
 
 
 
@@ -475,10 +475,10 @@ The major drawback of decentralized ledgers currently in production is the probl
 ### Average Distance Between Nodes
 
 
-A decentralized ledger runs on a distributed network of individual nodes. Such networks are well studied in the context of Internet, distributed database systems, and even social networks. If nodes in a distributed network find their neighbors randomly with a bias toward geographical proximity, we will have an architecture similar to the Internet’s architecture, but obviously much smaller. Such networks when represented as graphs are usually consisted of pockets of dense sub graphs connected to create a larger graph. Average distance between nodes, hence the amount of time it takes for a message to reach other nodes grows very slowly even when the network grows very fast. The figure below shows that the average distance between nodes in such graphs drops sharply after a number between 5 or 10 regardless of the size of the graph [15].
+A decentralized ledger runs on a distributed network of individual nodes. Such networks are well studied in the context of Internet, distributed database systems, and even social networks. If nodes in a distributed network find their neighbors randomly with a bias toward geographical proximity, we will have an architecture similar to the Internet’s architecture, but obviously much smaller. Such networks when represented as graphs are usually consisted of pockets of dense sub graphs connected to create a larger graph. Average distance between nodes, hence the amount of time it takes for a message to reach other nodes grows very slowly even when the network grows very fast. The figure below shows that the average distance between nodes in such graphs drops sharply after a number between 5 or 10 regardless of the size of the graph [12].
 
 ![Figure 9](img/figure9.png)
-Figure 9 - Shows the probability that distance from a given source node in graph is greater than d [15]
+Figure 9 - Shows the probability that distance from a given source node in graph is greater than d [12]
 
 
 Since the distance between nodes does not grow too fast, the load on nodes will grow as fast as the network, hence, the size of the network is effectively bound by the processing power of the average node. This is a significant limiting factor. The typical next step to break down the load on the network is sharding, but sharding is not easy for the blockchain because of the consensus mechanism.
@@ -750,21 +750,15 @@ In sum, Ferrum Network is the worlds’ first fully interoperable decentralized 
 
 # References
 
-https://bitcoin.org/bitcoin.pdf
-1.  https://media.consensys.net/state-of-decentralized-exchanges-2018-276dad340c79
-2.  https://ericsink.com/vcbe/html/directed_acyclic_graphs.html
-3. https://ieeexplore.ieee.org/document/8416434
-4. https://lightning.network/lightning-network-paper.pdf
-5. https://www.wired.com/2014/03/bitcoin-exchange/
-6. https://www.reuters.com/article/us-japan-cryptocurrency-q-a/the-coincheck-hack-and-the-issue-with-crypto-assets-on-centralized-exchanges-idUSKBN1FI0K4
-7. https://coinmarketcap.com/rankings/exchanges/
-8. https://www.businessinsider.com/cryptocurrency-exchanges-listing-tokens-cost-fees-ico-2018-3
-9. https://0xproject.com/pdfs/0x_white_paper.pdf
-10. https://swap.tech/whitepaper/
-11. https://idex.market/whitepaper
-12. https://arxiv.org/pdf/1801.09515.pdf
-13. https://courses.csail.mit.edu/6.857/2018/project/Hao-Chang-Lu-Zhang-CCExch.pdf
-14. https://www.ccn.com/otc-is-much-larger-than-bitcoin-exchange-volume-where-real-whales-trade/
-15. https://lightning.network/
-16. http://people.stern.nyu.edu/mbrenner/research/short_selling.pdf
-
+1. https://bitcoin.org/bitcoin.pdf
+2. https://ericsink.com/vcbe/html/directed_acyclic_graphs.html
+3. https://nano.org/en/whitepaper
+4. https://assets.ctfassets.net/r1dr6vzfxhev/2t4uxvsIqk0EUau6g2sw0g/45eae33637ca92f85dd9f4a3a218e1ec/iota1_4_3.pdf
+5. Shamir, A. (1979). How to share a secret. Communications of the ACM, 22(11), 612–613. doi:10.1145/359168.359176
+6. Complete reference
+7. Complete reference
+8. Complete reference
+9. Complete reference
+10. Complete reference
+11. Complete reference
+12. https://perso.uclouvain.be/vincent.blondel/publications/07BGHJ.pdf
