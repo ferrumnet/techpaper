@@ -531,7 +531,7 @@ To improve the speed of HASA algorithm, we can have a pool of adversaries ready 
 *	All the participants from the registry are chosen in groups of 5 by creating a hash from the whole registry public addresses, then selecting the address with closest Hamming Distance from this hash.
 *	Every other participant is selected by including the secret of the new address selected as a group member and finding the new closest address to the new hash.
 
-Pools are uniform representation of the whole network, so for an adversary to be able to control majority in a pool, they need to control more than $50% of the adversaries. However, there is a risk where an adversary with many adversaries’ addresses can have 3 adversaries in a 5-address pool. If he is willing to spend a lot of compute power, he can search for a transaction such that it's hash is closest the compromised pool. To prevent this situation, we propose the following pool selection algorithms:
+Pools are uniform representation of the whole network, so for an adversary to be able to control majority in a pool, they need to control more than 50% of the adversaries. However, there is a risk where an adversary with many adversaries’ addresses can have 3 adversaries in a 5-address pool. If he is willing to spend a lot of compute power, he can search for a transaction such that it's hash is closest the compromised pool. To prevent this situation, we propose the following pool selection algorithms:
 
 *	User submits a transaction
 *	The pool with hash closest to the transaction hash (hamming distance) is selected.
